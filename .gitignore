@@ -1,0 +1,38 @@
+import random
+
+def dogruluk_cesaret():
+    print("Doğruluk mu Cesaret mi oynamak istersiniz?")
+
+    secim = input("Lütfen 'd' for doğruluk, 'c' for cesaret girin: ").lower()
+
+    if secim == 'd':
+        dogruluk_sorulari()
+    elif secim == 'c':
+        cesaret_gorevleri()
+    else:
+        print("Geçersiz bir seçim yaptınız. Lütfen 'd' veya 'c' girin.")
+
+def dogruluk_sorulari():
+    sorular = [
+        "En son ne zaman yalan söyledin?",
+        "En utanç verici anın nedir?",
+        "En sevdiğin film nedir ve neden?",
+        # Ek soruları buraya ekleyebilirsiniz.
+    ]
+
+    secilen_soru = random.choice(sorular)
+    print("Soru: " + secilen_soru)
+
+def cesaret_gorevleri():
+    gorevler = [
+        "Bir şarkı söyleyin.",
+        "En komik taklitinizi yapın.",
+        "Dans edin.",
+        # Ek görevleri buraya ekleyebilirsiniz.
+    ]
+
+    secilen_gorev = random.choice(gorevler)
+    print("Görev: " + secilen_gorev)
+
+if __name__ == "__main__":
+    dogruluk_cesaret()
